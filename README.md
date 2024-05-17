@@ -1,4 +1,4 @@
-# # Proyecto-Integrador---To-Do-App-Django
+## Proyecto-Integrador---To-Do-App-Django
 Este proyecto es una aplicación web simple para gestionar listas de tareas. Permite a los usuarios crear, leer, actualizar y eliminar tareas, así como también iniciar sesión y registrarse para utilizar la aplicación.
 
 # Características
