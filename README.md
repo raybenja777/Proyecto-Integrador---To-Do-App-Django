@@ -37,6 +37,6 @@ Este proyecto es una aplicación web simple para gestionar listas de tareas. Per
 - Cuando hayas terminado de trabajar con la aplicación, puedes cerrar sesión haciendo clic en el enlace "Cerrar sesión" en la esquina superior derecha de la página.
 
 # Créditos
-Este proyecto fue creado por Randy Benjamin Cuevas Sanchez 
+Este proyecto fue creado por Randy Benjamín Cuevas Sánchez 
 
 
