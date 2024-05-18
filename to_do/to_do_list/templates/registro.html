@@ -1,0 +1,19 @@
+<!-- registro.html -->
+{% load static %} <!-- Esta línea carga los archivos estáticos como CSS, JavaScript, etc. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+<body>
+    <h1>Registrarse</h1>
+    <form method="post">
+        {% csrf_token %} <!-- Token de seguridad para evitar ataques CSRF -->
+        {{ form.as_p }} <!-- Renderiza los campos del formulario -->
+        <button type="submit" class='register-button'>Registrarse</button>
+    </form>
+    <a href="{% url 'login' %}" class="login-link">Volver a inicio de sesion</a> <!-- Enlace para volver a la página de inicio de sesión -->
+</body>
+</html>

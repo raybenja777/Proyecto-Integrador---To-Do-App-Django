@@ -1,0 +1,42 @@
+<!-- task_list.html -->
+{% load static %} <!-- Esta línea carga los archivos estáticos como CSS, JavaScript, etc. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>Lista de Tareas</h1>
+    <ul class='task_item'>
+        {% load tz %}
+        {% timezone "America/Santo_Domingo" %}
+        {% for task in object_list %}
+            <li class='task_item2'>
+                <div class="task_info">
+                    <span>{{ task.title }} - {{ task.description }} - {{ task.status }} - {{ task.created_at|date:'Y-m-d H:i:s' }}</span> <!-- Muestra la información de la tarea, incluido el título, descripción, estado y fecha de creación -->
+                </div>
+                <div class="task_actions">
+                    <a href="{% url 'task_update' pk=task.pk %}" class='update_link edit_button'>Editar</a> <!-- Enlace para editar la tarea -->
+                    <a href="{% url 'task_delete' pk=task.pk %}" class='delete_link'>Eliminar</a> <!-- Enlace para eliminar la tarea -->
+                </div>
+            </li>
+        {% endfor %}
+        {% endtimezone %}
+    </ul>
+    <a href="{% url 'task_create' %}" class='create_link'>Crear nueva tarea</a> <!-- Enlace para crear una nueva tarea -->
+    
+    <form action="{% url 'logout' %}" method="post" class="logout_form">
+        {% csrf_token %}
+        <button type="submit" class='logout_button'>Cerrar Sesión</button> <!-- Botón para cerrar sesión -->
+    </form>
+    {% else %}
+    <script>
+        window.location.href = '{% url 'login' %}?next={{ request.path }}' 
+    </script>
+    {% endif %}
+</body>
+</html>

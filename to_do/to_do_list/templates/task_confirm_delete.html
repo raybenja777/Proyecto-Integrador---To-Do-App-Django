@@ -1,0 +1,24 @@
+<!-- task_confirm_delete.html -->
+{% load static %} <!-- Esta línea carga los archivos estáticos como CSS, JavaScript, etc. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Eliminación</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>¿Estás seguro de que deseas eliminar la tarea "{{ object.title }}"?</h1> <!-- Mensaje de confirmación para eliminar la tarea -->
+    <form method="post">
+        {% csrf_token %} <!-- Token de seguridad para evitar ataques CSRF -->
+        <button type="submit" class='delete_task'>Sí, eliminar</button> <!-- Botón para confirmar la eliminación de la tarea -->
+        <button type="button" class="cancel-button" onclick="window.location.href='{% url 'task_list' %}'">Cancelar</button> <!-- Botón para cancelar y volver a la lista de tareas -->
+    </form>
+    {% else %}
+    <script>
+        window.location.href = "{% url 'login' %}?next={{ request.path }}"
+    </script>
+    {% endif %}
+</body>
+</html>

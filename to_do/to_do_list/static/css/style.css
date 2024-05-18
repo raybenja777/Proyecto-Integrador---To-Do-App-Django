@@ -1,0 +1,356 @@
+/* style.css */
+
+/* Estilos para el elemento <body> */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Fuente de letra */
+    background: linear-gradient(to right, #0a133d, #4391a8); /* Fondo con color Gradiente */
+    padding: 0; /* Quitar el relleno */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    min-height: 100vh; /* Alto minimo */
+    display: flex; /* Centrar el contenido verticalmente */
+    flex-direction: column; /* Centrar el contenido horizontalmente */
+    justify-content: center; /* Centrar el contenido verticalmente */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    text-shadow:#0a0a0a; /* Sombra de texto */
+}
+
+
+
+/* Estilos para el elemento <h1> */
+h1 {
+    margin-top: 20px; /* Espacio entre el texto y el elemento <h1> */
+    margin-bottom: 20px; /* Espacio entre el texto y el elemento <h1> */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+}
+
+/* Estilos para el elemento <ul> */
+ul {
+    list-style: decimal; /* Estilo de lista */
+    padding: 0; /* Quitar el relleno */
+    text-align: center; /* Centrar el texto */
+    max-width: 600px; /* Ancho máximo de la lista */
+    margin: 0 auto; /* Centrar horizontalmente */
+    text-shadow: #0a0a0a; /* Sombra de texto */
+}
+
+/* Estilos para el elemento <ul> de task_list.html*/
+.task_item {
+    margin-bottom: 40px !important; /* Espacio entre el elemento <li> y el elemento <ul> */
+    background-color: #3a4c5e; /* Color de fondo */
+    padding: 30px; /* Espacio interno alrededor de la lista de tareas */
+    border-radius: 10px; /* Bordes redondeados para la lista de tareas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera alrededor de la lista de tareas */
+}
+
+/* Estilos para el elemento <li> de task_list.html */
+.task_item .task_item2 {
+    margin-bottom: 20px !important; /* Espacio entre el elemento <li> y el elemento <ul> */
+}
+
+/* Estilos para el elemento <a> de task_list.html */
+.task_list ul li a {
+    margin-left: 10px; /* Espacio entre el elemento <a> y el elemento <li> */
+    color: #800e0e; /* Color del texto */
+}
+
+/* Estilos para el formulario de task_form.html */
+.task_form {
+    margin-top: 50px; /* Espacio arriba del formulario */
+    display: flex; /* Centrar el formulario */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Estilos para el formulario de task_form.html */
+.task_form form {
+    width: 80%; /* Ancho del formulario */
+    max-width: 500px; /* Ancho máximo del formulario */
+    padding: 20px; /* Espacio interno alrededor del formulario */
+    background-color: #031d07; /* Color de fondo */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alineación de texto izquierda */
+    margin-bottom: 50px; /* Espacio debajo del formulario */
+}
+
+/* Estilos para el elemento <input y textarea> de task_form.html */
+.task_form input[type="text"],
+.task_form textarea {
+    width: calc(100% - 22px); /* Ancho del campo de entrada */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio debajo del campo de entrada */
+    border: 1px solid #251c1c;  /* Color del borde */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+/* Estilos para el elemento <button> de task_form.html */
+.task_form button {
+    width: 100%; /* Ancho del botón igual al formulario */
+    padding: 10px 20px; /* Espacio interno del botón */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+}
+
+/* Estilos para el elemento <button> de task_form.html cuando el cursor este sobre el botón */
+.task_form button:hover {
+    background-color: #80811f; /* Color de fondo cuando el cursor este sobre el botón */
+    text-shadow: black; /* Sombra de texto */
+}
+
+/* Cambiar el color del enlace "Eliminar" al pasar el mouse */
+.delete_link:hover {
+    background-color: #344C64; /* Cambiar a un color diferente al pasar el mouse */
+    
+}
+
+/* Estilos para el elemento <a> de task_list.html */
+.delete_link {
+    background-color: #66aca7; /* Color de fondo normal */
+    color: white; /* Color del texto */
+    border: 5px; /* Sin borde */
+    padding: 8px 20px; /* Espacio interno */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    text-decoration: none; /* Quita el subrayado */
+    
+}
+
+/* Estilos para el elemento <button> de task_list.html */
+.edit_button {
+    background-color: #577B8D; /* Color de fondo normal */
+    color: white; /* Color del texto */
+    padding: 8px 20px; /* Espacio interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Estilos para el elemento <button> de task_list.html cuando el cursor este sobre el botón */
+.edit_button:hover {
+    background-color: #344C64; /* Cambiar el color de fondo cuando el cursor esté sobre el botón */
+}
+
+/* Cambiar el color del enlace "Crear nueva tarea" al pasar el mouse en task_list.html */
+.create_link:hover {
+    background-color: #344C64; /* Cambiar a un color diferente al pasar el mouse */
+    
+}
+
+/* Estilos para el elemento <a> de task_list.html */
+.create_link {
+    background-color: #240750; /* Color de fondo normal */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 20px; /* Espacio interno */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer;   /* Cambiar el cursor cuando el cursor este sobre el botón */
+    text-decoration: none;  /* Quita el subrayado */
+}
+
+/* Estilos para el elemento <input y textarea> de task_form.html */
+input[type="text"], textarea {
+    width: 100%; /* Ancho del campo de entrada igual al 100% del contenedor */
+    max-width: 500px; /* Ancho máximo del campo de entrada */
+    padding: 10px; /* Espacio interno */
+    margin-bottom: 20px; /* Espacio debajo del campo de entrada */
+    border: 1px solid #251c1c;  /* Color del borde */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+}
+
+/* Centrar el texto dentro del campo de descripción */
+.task_form p {
+    text-align: center /* Centrar el texto */
+}
+
+/* Centrar el texto dentro del campo de estado */
+.status_field select,
+.status_field input {
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el elemento <button> de login.html */
+.login-button {
+    background-color: #213694; /* Fondo de color azul */
+    color: rgb(240, 235, 235); /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para el elemento <button> de login.html cuando el cursor este sobre el botón */
+.login-button:hover {
+    background-color: #488fa1; /* Fondo de color Azul celeste al momento de pasar el cursor */
+}
+
+/* Estilos para el elemento <button> de registro.html */
+.register_ {
+    background-color: #216094; /* Color de fondo azul */
+    color: rgb(240, 235, 235); /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+    display: inline-block; /* Hacer que los elementos fluyan uno al lado del otro */
+    margin-top: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para el elemento <button> de registro.html cuando el cursor este sobre el botón */
+.register_:hover {
+    background-color: #6cbed3; /* Fondo de color azul celeste al momento de pasar el cursor */
+}
+
+/* Agregar espacio entre las tareas */
+.task_info {
+    display: inline-block; /* Hacer que los elementos fluyan uno al lado del otro */
+    margin-bottom: 20px; /* Ajusta este valor según la cantidad de espacio que desees */
+}
+
+/* Estilo para el elemento <div> de task_list.html */
+.task_actions {
+    display: inline-block; /* Hacer que los elementos fluyan uno al lado del otro */
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+/* Estilo para el elemento <div> de task_list.html para cerrar la sesión del usuario */
+.logout_button {
+    margin-top: 30px; /* Espacio arriba del elemento <div> */
+    background-color: #090f29; /* Fondo de color Gris oscuro */
+    color: white; /* Letra de color Blanco */
+    border: none; /* Sin borde */
+    padding: 8px 20px; /* Espacio interno */
+    border-radius: 4px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Estilo para el elemento <div> de task_list.html cuando el cursor este sobre el botón */
+.logout_button:hover {
+    background-color: #5c63a1; /* Fondo de color azul celeste al momento de pasar el cursor */
+}
+
+/* Estilo para el elemento <button> de task_confirm_delete.html */
+.delete_task {
+    background-color: #8d1a16; /* Color de fondo Rojo */
+    color: white; /* Color de texto Blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+}
+
+/* Estilo para el elemento <button> de task_confirm_delete.html cuando el cursor este sobre el botón */
+.delete_task:hover {
+    background-color: #610c0c;  /* Color de fondo Rojo oscuro al momento de pasar el cursor */
+}
+
+/* Estilo para el botón "Cancelar del task_confirm_delete.html" */
+.cancel-button {
+    background-color: #213694; /* Fondo de color azul */
+    color: rgb(240, 235, 235); /* Letra de color Blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+}
+
+/* Estilo para el botón "Cancelar del task_confirm_delete.html" cuando el cursor este sobre el botón */
+.cancel-button:hover {
+    background-color: #a14848; /* Rojo ladrillo claro */
+}
+
+/* Estilo para el botón "Cancelar de task_form.html" */
+.cancel_button {
+    background-color: #213694; /* Fondo de color azul */
+    color: rgb(240, 235, 235); /* Letra de color Blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease; /* Agregar transicion al color de fondo */
+}
+
+/* Estilo para el botón "Cancelar de task_form.html" cuando el cursor este sobre el botón */
+.cancel_button:hover {
+    background-color: #486ea1; /* Fondo de color azul celeste */
+}
+
+/* Estilo para el boton "Guardar" de task_form.html */
+.saveedit_button {
+    background-color: #060e33; /* Fondo de color azul oscuro */
+    color: rgb(240, 235, 235); /* Letra de color Blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+    margin-left: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para el boton "Guardar" de task_form.html cuando el cursor este sobre el botón */
+.saveedit_button:hover {
+    background-color: #486ea1; /* Fondo de color azul celeste */
+}
+
+
+/* Estilos para el formulario de registro, el boton de 'registrarse' de registro.html*/
+.register-button {
+    width: 50%; /* Ancho del botón */
+    padding: 10px; /* Espacio interno */
+    background-color: #28a745; /* Fondo de color Verde */
+    color: white; /* Color de texto Blanco */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambiar el cursor cuando el cursor este sobre el botón */
+    display: block; /* Cambia el botón a un elemento de bloque */
+    margin: 0 auto; /* Centra horizontalmente el botón */
+    border: 2px solid white; /* Ajusta el ancho del borde y el color*/
+}
+
+/* Estilos para el formulario de registro, el boton de 'registrarse' de registro.html cuando el cursor este sobre el botón */
+.register-button:hover {
+    background-color: #218838; /* Fondo de color Verde oscuro al momento de pasar el cursor */
+    border-color: white; /* Cambia el color del borde al pasar el cursor */
+}
+
+/* Estilos para el link de 'Volver a iniciar sesion' de registro.html */
+.login-link {
+    display: block; /* Cambia el link a un elemento de bloque */
+    text-align: center; /* Centra el texto */
+    margin-top: 10px; /* Ajusta este valor dependiendo de la cantidad de espacio que desees */
+    color: #007bff; /* Color de texto azul */
+    text-decoration: none; /* Quita el subrayado */
+    background-color: #213694; /* Fondo de color azul */
+    color: white; /* Cambia el color del texto a blanco */
+    border: 2px solid white; /* Ajusta el ancho del borde y el color*/
+    padding: 10px; /* Ajusta el relleno del botón */
+    text-decoration: none; /* Quita el subrayado */
+    border-radius: 5px; /* Agrega bordes redondeados */
+}
+
+/* Estilos para el link de 'Volver a iniciar sesion' de registro.html cuando el cursor este sobre el botón */
+.login-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cambia el color de fondo al pasar el ratón */
+    border-color: #fff; /* Cambia el color del borde al pasar el ratón */
+}

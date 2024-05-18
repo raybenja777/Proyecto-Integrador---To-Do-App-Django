@@ -1,0 +1,22 @@
+<!-- login.html -->
+{% load static %} <!-- Esta línea carga los archivos estáticos como CSS, JavaScript, etc. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form method="post" action="{% url 'login' %}?next={% url 'task_list' %}">
+        {% csrf_token %} <!-- Token de seguridad para evitar ataques CSRF -->
+        {{ form.as_p }} <!-- Renderiza los campos del formulario -->
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+    <form method="get" action="{% url 'register' %}">
+        <button type="submit" class="register_">Registrarse</button>
+    </form>
+</body>
+</html>
+

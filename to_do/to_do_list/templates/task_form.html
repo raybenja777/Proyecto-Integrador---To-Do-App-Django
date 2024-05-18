@@ -1,0 +1,25 @@
+<!-- task_form.html -->
+{% load static %} <!-- Esta línea carga los archivos estáticos como CSS, JavaScript, etc. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Editar Tarea{% else %}Crear Tarea{% endif %}</title> <!-- Título de la página dependiendo de si se está editando o creando una tarea -->
+    <link rel="stylesheet" href='{% static "css/style.css" %}'> <!-- Enlaza el archivo CSS para estilos -->
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1>{% if form.instance.pk %}Editar Tarea{% else %}Crear Tarea{% endif %}</h1> <!-- Encabezado para editar o crear una tarea -->
+    <form method="post">
+        {% csrf_token %} <!-- Token de seguridad para evitar ataques CSRF -->
+        {{ form.as_p }} <!-- Renderiza los campos del formulario -->
+        <button type="submit" class='saveedit_button'>Guardar</button> <!-- Botón para guardar los cambios en la tarea -->
+        <button type="button" onclick="window.location.href='{% url 'task_list' %}'" class="cancel_button">Cancelar y volver a la lista de tareas</button> <!-- Botón para cancelar y volver a la lista de tareas -->
+    </form>
+    {% else %}
+    <script>
+        window.location.href = "{% url 'login' %}?next={{ request.path }}" 
+    </script>
+    {% endif %}
+</body>
+</html>
